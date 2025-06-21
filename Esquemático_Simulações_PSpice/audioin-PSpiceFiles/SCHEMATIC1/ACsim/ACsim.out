@@ -1,0 +1,363 @@
+
+**** 06/11/25 23:04:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\a
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ACsim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 2000 24000
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AUDIOIN
+.EXTERNAL OUTPUT 5V
+.EXTERNAL OUTPUT VCC+
+.EXTERNAL OUTPUT VCC-
+.EXTERNAL OUTPUT VREF
+.EXTERNAL OUTPUT Buffer_Out
+.EXTERNAL OUTPUT CS_OUT
+.EXTERNAL OUTPUT V8
+.EXTERNAL OUTPUT ALIAS_OUT
+C_C10         0 N02426  2.2n  TC=0,0 
+R_R9         N02426 N02884  10k TC=0,0 
+R_R7         N02282 N02330  10k TC=0,0 
+C_C9         0 N02452  1n  TC=0,0 
+C_C6         N02282 N02124  3.3n  TC=0,0 
+R_R10         N02884 N02452  10k TC=0,0 
+C_C7         N02884 N02146  3.3n  TC=0,0 
+C_C8         0 N02330  1.5n  TC=0,0 
+E_U3         N02124 0 VALUE {LIMIT(V(N02330,N02124)*1E6,-15V,+15V)}
+E_U4         N02146 0 VALUE {LIMIT(V(N02452,N02146)*1E6,-15V,+15V)}
+R_R6         N02146 N02282  10k TC=0,0 
+R_R8         CS_OUT N02426  10k TC=0,0 
+E_U5         ALIAS_OUT 0 VALUE {LIMIT(V(N03986,ALIAS_OUT)*1E6,-15V,+15V)}
+R_R11         N02124 N03928  10k TC=0,0 
+C_C11         N03928 ALIAS_OUT  10n  TC=0,0 
+C_C12         0 N03986  0.5n  TC=0,0 
+R_R12         N03928 N03986  10k TC=0,0 
+R_R13         BUFFER_OUT N05873  50.8k TC=0,0 
+R_R16         N05881 N05911  10k TC=0,0 
+R_R17         N05911 CS_OUT  10k TC=0,0 
+V_V4         5V 0 5
+R_R14         VREF N05873  50.8k TC=0,0 
+R_R15         N05873 N05881  10k TC=0,0 
+X_U8         N07263 VREF VCC+ VCC- VREF UA741
+V_V5         VCC+ 0 15
+V_V6         VCC- 0 -15
+R_R18         N07263 5V  10k TC=0,0 
+R_R19         0 N07263  6.67k TC=0,0 
+X_U9         0 N05873 VCC+ VCC- N05881 UA741
+X_U10         0 N05911 VCC+ VCC- CS_OUT UA741
+C_C13         N09132 N09186  1u  
+R_R20         0 N09186  10k TC=0,0 
+X_U11         N09186 BUFFER_OUT VCC+ VCC- BUFFER_OUT UA741
+X_U12         ALIAS_OUT N10926 VCC+ VCC- N10876 UA741
+D_D1         N10876 N10920 Dbreak 
+R_R21         N10926 N10920  470 TC=0,0 
+X_D2         0 N10926 Zener_parameterized PARAMS: VZT=3.3 RSF=100m
+V_V8         V8 0 5
+C_C14         VCC+ 0  0.1u  
+C_C15         VCC- 0  0.1u  
+V_V9         N09132 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING ACsim.cir ****
+.END
+
+WARNING(ORPSIM-15246): Library index file nom_pspti.ind does not have the correct format
+
+INFO(ORPSIM-15422): Making new index file nom_pspti.ind for library file nom_pspti.lib.
+b2e4e117ac3ae9d81b0a9590344b9f0be3a13d734fc0d5d3bc0ae1622ce0f1f9be7002c9257815a723e6968b7ce9d1912158f221a9c6c7f774db6896643a33b0
+$CDNENCFINISH_ADV2
+.ENDS
+*$
+.SUBCKT VC_RES1_68k     1 2     4 5
+$CDNENCSTART_ADV2
+17f62b1fb318c25603aeb85644ae98a5d179ef807807791f6459efacb9d7ffc37a831b146dc0f06bb1ef275619162e6d8f7ad0dc708bf15ae1a1d5bd0ae623b2
+4338d7c6b789b936510049641c41694601a828b94bca95e37d9595892e84fe4adde61b3186a8a4ced614ffd7534112da752ebe196261f5fadbdc1df943f8b053
+b2e4e117ac3ae9d81b0a9590344b9f0be3a13d734fc0d5d3bc0ae1622ce0f1f9be7002c9257815a723e6968b7ce9d1912158f221a9c6c7f774db6896643a33b0
+$CDNENCFINISH_ADV2
+.ENDS
+*$
+.model Mbreakp PMOS_SIMPLE 
+$CDNENCSTART_ADV2
+17f62b1fb318c25603aeb85644ae98a5d179ef807807791f6459efacb9d7ffc37a831b146dc0f06bb1ef275619162e6d8f7ad0dc708bf15ae1a1d5bd0ae623b2
+d0a62a7eecff332c2c1a7f28e691e8355b0d507d4d4167bdded4599b6b3f07ed49ca0bf013e9ee48384f4a7c200902eb9bd5e11d04cca5bd57a5eb5ba1dfe8a6
+$CDNENCFINISH_ADV2
+*$
+
+WARNING(ORPSIM-15195): Model type unknown
+
+Index has 123323 entries from 5464 file(s).
+
+INFO(ORPSIM-16573): AC analysis does not support expression evaluation at each frequency. ABM devices with non-linear operations will be evaluated only at bias point.
+
+**** 06/11/25 23:04:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\a
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.DX         X_U9.DX         X_U10.DX        X_U11.DX        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+
+
+               X_U12.DX        
+          IS  800.000000E-18 
+
+
+**** 06/11/25 23:04:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\a
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.QX         X_U9.QX         X_U10.QX        X_U11.QX        
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   62.5            62.5            62.5            62.5          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U12.QX        
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   62.5          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/11/25 23:04:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\a
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   5V)    5.0000  (   V8)    5.0000  ( VCC+)   15.0000  ( VCC-)  -15.0000      
+
+( VREF)    2.0002  (CS_OUT)     .3936 (N02124)     .3936 (N02146)     .3936     
+
+(N02282)     .3936 (N02330)     .3936 (N02426)     .3936 (N02452)     .3936     
+
+(N02884)     .3936 (N03928)     .3936 (N03986)     .3936 (N05873) 13.09E-06     
+
+(N05881)    -.3928 (N05911) 9.325E-06 (N07263)    2.0003 (N09132)    0.0000     
+
+(N09186)-797.3E-06 (N10876)     .9489 (N10920)     .4010 (N10926)     .3936     
+
+(X_D2.1)   -2.4111 (X_D2.3)    2.8047 (X_D2.9)-6.645E-15 (X_U8.6)-126.8E-06     
+
+(X_U8.7)    2.0062 (X_U8.8)    2.0062 (X_U8.9)    0.0000 (X_U9.6) 26.25E-06     
+
+(X_U9.7)    -.4046 (X_U9.8)    -.4046 (X_U9.9)    0.0000 (X_U10.6)-25.55E-06    
+
+(X_U10.7)     .3995                   (X_U10.8)     .3995                       
+
+(X_U10.9)    0.0000                   (X_U11.6) 48.33E-09                       
+
+(X_U11.7)-776.5E-06                   (X_U11.8)-776.5E-06                       
+
+(X_U11.9)    0.0000                   (X_U12.6)-60.11E-06                       
+
+(X_U12.7)     .9513                   (X_U12.8)     .9513                       
+
+(X_U12.9)    0.0000                   (X_U8.10)    1.4027                       
+
+(X_U8.11)   14.9600                   (X_U8.12)   14.9600                       
+
+(X_U8.13)    1.4167                   (X_U8.14)    1.4167                       
+
+(X_U8.53)   12.4000                   (X_U8.54)  -12.4000                       
+
+(X_U8.90)     .0395                   (X_U8.91)   25.0000                       
+
+(X_U8.92)  -25.0000                   (X_U8.99)    0.0000                       
+
+(X_U9.10)    -.5972                   (X_U9.11)   14.9600                       
+
+(X_U9.12)   14.9600                   (X_U9.13)    -.5833                       
+
+(X_U9.14)    -.5833                   (X_U9.53)   12.4000                       
+
+(X_U9.54)  -12.4000                   (X_U9.90)    -.0786                       
+
+(X_U9.91)   25.0000                   (X_U9.92)  -25.0000                       
+
+(X_U9.99)    0.0000                   (X_U10.10)    -.5972                      
+
+(X_U10.11)   14.9600                  (X_U10.12)   14.9600                      
+
+(X_U10.13)    -.5833                  (X_U10.14)    -.5833                      
+
+(X_U10.53)   12.4000                  (X_U10.54)  -12.4000                      
+
+(X_U10.90)     .0394                  (X_U10.91)   25.0000                      
+
+(X_U10.92)  -25.0000                  (X_U10.99)    0.0000                      
+
+(X_U11.10)    -.5980                  (X_U11.11)   14.9600                      
+
+(X_U11.12)   14.9600                  (X_U11.13)    -.5841                      
+
+(X_U11.14)    -.5841                  (X_U11.53)   12.4000                      
+
+(X_U11.54)  -12.4000                  (X_U11.90) 64.02E-06                      
+
+(X_U11.91)   25.0000                  (X_U11.92)  -25.0000                      
+
+(X_U11.99)    0.0000                  (X_U12.10)    -.2037                      
+
+(X_U12.11)   14.9600                  (X_U12.12)   14.9600                      
+
+(X_U12.13)    -.1898                  (X_U12.14)    -.1898                      
+
+(X_U12.53)   12.4000                  (X_U12.54)  -12.4000                      
+
+(X_U12.90)     .0158                  (X_U12.91)   25.0000                      
+
+(X_U12.92)  -25.0000                  (X_U12.99)    0.0000                      
+
+(ALIAS_OUT)     .3936                 (BUFFER_OUT)-786.1E-06                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -3.000E-04
+    V_V5        -8.333E-03
+    V_V6         8.334E-03
+    V_V8         0.000E+00
+    V_V9         0.000E+00
+    X_U8.VB     -1.268E-09
+    X_U8.VC      1.040E-11
+    X_U8.VE      1.440E-11
+    X_U8.VLIM    3.946E-05
+    X_U8.VLP    -2.496E-11
+    X_U8.VLN    -2.504E-11
+    X_U9.VB      2.625E-10
+    X_U9.VC      1.279E-11
+    X_U9.VE      1.201E-11
+    X_U9.VLIM   -7.856E-05
+    X_U9.VLP    -2.508E-11
+    X_U9.VLN    -2.492E-11
+    X_U10.VB    -2.555E-10
+    X_U10.VC     1.201E-11
+    X_U10.VE     1.279E-11
+    X_U10.VLIM   3.936E-05
+    X_U10.VLP   -2.496E-11
+    X_U10.VLN   -2.504E-11
+    X_U11.VB     4.833E-13
+    X_U11.VC     1.240E-11
+    X_U11.VE     1.240E-11
+    X_U11.VLIM   6.402E-08
+    X_U11.VLP   -2.500E-11
+    X_U11.VLN   -2.500E-11
+    X_U12.VB    -6.011E-10
+    X_U12.VC     1.145E-11
+    X_U12.VE     1.335E-11
+    X_U12.VLIM   1.584E-05
+    X_U12.VLP   -2.499E-11
+    X_U12.VLN   -2.502E-11
+
+    TOTAL POWER DISSIPATION   2.51E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/11/25 23:04:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\a
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       91.70
+
