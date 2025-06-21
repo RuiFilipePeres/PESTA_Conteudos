@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/DMA_config.c=UTF-8
+encoding//src/TIM_config.c=UTF-8
+encoding//src/adc_config.c=UTF-8
+encoding//src/main.c=UTF-8
