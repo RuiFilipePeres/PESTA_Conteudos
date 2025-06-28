@@ -8,7 +8,7 @@
         ("C_elect")
         ("Dbreak")
         ("Zener_P")
-        ("VAC")
+        ("VSIN")
     )
     ("instances"
         ("C10"
@@ -641,7 +641,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"0W")
+                    ("value"	"-132.7nW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("Schematics' Source Library"
@@ -896,11 +896,11 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"50.8k")
+                    ("value"	"45.97k")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"12.57pW")
+                    ("value"	"14.11pW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -951,7 +951,7 @@
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"15.43uW")
+                    ("value"	"271.8uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1002,7 +1002,7 @@
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"15.49uW")
+                    ("value"	"272.0uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1049,11 +1049,11 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"5")
+                    ("value"	"3.3V")
                     ("pspice_param"	"DC")
                 )
                 ("BiasValue Power"
-                    ("value"	"-1.500mW")
+                    ("value"	"-544.6uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1068,11 +1068,11 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"50.8k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"78.76uW")
+                    ("value"	"272.1uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1123,7 +1123,7 @@
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"15.43uW")
+                    ("value"	"271.8uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1170,7 +1170,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"49.92mW")
+                    ("value"	"49.73mW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("productURL"
@@ -1231,7 +1231,7 @@
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"899.8uW")
+                    ("value"	"272.4uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1278,11 +1278,11 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"6.67k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"599.9uW")
+                    ("value"	"272.1uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1329,7 +1329,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"49.97mW")
+                    ("value"	"49.46mW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("Testbenches"
@@ -1348,7 +1348,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"49.98mW")
+                    ("value"	"49.73mW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("Testbenches"
@@ -1500,7 +1500,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"50.00mW")
+                    ("value"	"49.85mW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("productURL"
@@ -1519,7 +1519,7 @@
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"
-                    ("value"	"32.94nW")
+                    ("value"	"38.67uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("AREA"
@@ -1534,11 +1534,11 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"470")
+                    ("value"	"100")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"3.017pW")
+                    ("value"	"2.055uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -1593,7 +1593,7 @@
                     ("pspice_param"	"RSF")
                 )
                 ("BiasValue Power"
-                    ("value"	"3.436fW")
+                    ("value"	"108.9uW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("AREA"
@@ -1744,25 +1744,49 @@
             )
         )
         ("V9"
-            ("device_name"	"VAC")
+            ("device_name"	"VSIN")
             ("pspice_path"	"V_V9")
             ("level"	"0")
             ("model_params"
-                ("DC"
-                    ("value"	"0Vdc")
-                    ("pspice_param"	"DC")
-                )
-                ("ACMAG"
-                    ("value"	"1Vac")
+                ("AC"
+                    ("value"	"0")
                     ("pspice_param"	"AC")
                 )
                 ("BiasValue Power"
                     ("value"	"0W")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("ACPHASE"
+                ("VAMPL"
+                    ("value"	"1.8")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("FREQ"
+                    ("value"	"440")
+                    ("pspice_param"	"FREQ")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DC"
                     ("value"	"")
-                    ("pspice_param"	"ACPHASE")
+                    ("pspice_param"	"DC")
+                )
+                ("PSpice Model Type"
+                    ("value"	"0011")
+                    ("pspice_param"	"PSpice Model Type")
                 )
             )
         )

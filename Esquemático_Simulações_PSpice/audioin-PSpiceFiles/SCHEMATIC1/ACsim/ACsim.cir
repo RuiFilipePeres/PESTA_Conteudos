@@ -1,4 +1,4 @@
-** Profile: "SCHEMATIC1-ACsim"  [ c:\users\35191\onedrive - instituto superior de engenharia do porto\desktop\pesta\pspice\audioin\audioin\audioin-pspicefiles\schematic1\acsim.sim ] 
+** Profile: "SCHEMATIC1-ACsim"  [ C:\PROJETO_FINAL\Repositório\Esquemático_Simulações_PSpice\audioin-PSpiceFiles\SCHEMATIC1\ACsim.sim ] 
 
 ** Creating circuit file "ACsim.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -11,7 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.AC LIN 1000 2000 24000
+.TRAN  0 2ms 0 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
